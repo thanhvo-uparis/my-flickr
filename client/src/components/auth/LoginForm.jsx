@@ -1,3 +1,13 @@
+const LoginForm = () => {
+    return (
+        <div className='loginform'>
+            <span className='title'>LoginForm</span>
+        </div>
+    )
+}
+
+export default LoginForm
+/*
 import React, {useState} from 'react';
 import { useEffect } from 'react';
 import {useHistory} from 'react-router-dom';
@@ -64,3 +74,4 @@ const Login = () => {
 }
 
 export default Login;
+*/

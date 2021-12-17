@@ -11,8 +11,6 @@
 # production
 /build
 
-api/node_modules/.cache/@babel/register/.babel.7.16.5.developement.json
-
 # misc
 .DS_Store
 .env.local

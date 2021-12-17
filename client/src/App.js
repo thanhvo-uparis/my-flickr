@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import Login from './components/auth/LoginForm';
 import Navbar from './components/navbar/Navbar';
-import Login from './components/auth/Login';
 import Landing from './components/layout/Landing';
 
 import User from './routers/user.router';
@@ -14,10 +14,10 @@ function App() {
     <div className="app-container">
       <Router>
          <Routes>
-            <Route path="/" element={<Landing/>} />
-            <Route path="/login" element={<Login/>} />
-            <Route path="/users" element={<User/>} />
-            <Route path="/upload" element={<Upload/>} />
+            <Route path="/" element={<Login/>} />
+            {/* <Route path="/" element={<Landing/>} /> */}
+            {/* <Route path="/users" element={<User/>} />
+            <Route path="/upload" element={<Upload/>} /> */}
          </Routes>
       </Router>
     </div>
