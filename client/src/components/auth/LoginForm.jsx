@@ -3,6 +3,8 @@ import { AuthContext } from '../../contexts/AuthContext';
 // import { Button } from 'bootstrap';
 
 const LoginForm = () => {
+    const {loginUser} = useContext(AuthContext);
+
     const [loginForm, setLoginForm] = useState({
         username: "",
         password: ""
@@ -12,6 +14,18 @@ const LoginForm = () => {
 
     const onUsernameChange = event => console.log({...loginForm, username: event.target.value});
     const onPasswordChange = event => console.log({...loginForm, password: event.target.value});
+
+    const login = async event => {
+        event.preventDefault();
+
+        try {
+            const loginData = await loginUser(loginForm);
+            console.log(loginData);
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     return (
         <div className="w-full max-w-xs">
@@ -33,7 +47,7 @@ const LoginForm = () => {
                 </div>
 
                 <div class="flex items-center justify-between">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                <button onClick={(e) => onClick={login}} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                     Sign In
                 </button>
                 <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
