@@ -1,4 +1,5 @@
-// import {Redirect} from 'react-router-dom';
+/*
+import {Redirect} from 'react-router-dom';
 
 const Landing = () => {
     return (
@@ -8,4 +9,5 @@ const Landing = () => {
     )
 }
 
-export default Landing
+export default Landing;
+*/
