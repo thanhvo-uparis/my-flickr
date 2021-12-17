@@ -11,8 +11,9 @@ import Upload from './routers/upload.router';
 function App() {
   return (
       <Router>
+        <Login/>
          <Routes>
-            <Route path="/login" element={<Login/>} />
+            {/* <Route path="/login" element={<Login/>} /> */}
             <Route path="/user" element={<User/>} />
             <Route path="/upload" element={<Upload/>} />
          </Routes>
