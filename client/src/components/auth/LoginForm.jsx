@@ -9,8 +9,8 @@ const LoginForm = () => {
     
     async function login() {
         const response = await axios.post('http://localhost:8080/api/authentication/login', {username, password});
-        localStorage.setItem("token", response.data.token)
-        // localStorage.getItem('token')
+        localStorage.setItem("token", response.data.token);
+        localStorage.getItem('token');
         navigate("/home");
     };
 
@@ -31,7 +31,7 @@ const LoginForm = () => {
                 <p class="text-red-500 text-xs italic">Please choose a password.</p>
                 </div>
                 <div class="flex items-center justify-between">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                <button onClick={login} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                     Sign In
                 </button>
                 <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
